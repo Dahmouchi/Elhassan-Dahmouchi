@@ -10,7 +10,7 @@ const person = {
   avatar: "/images/avatar.jpg",
   email: "hassandahmouchi0@gmail.com",
   location: "Africa/Casablanca", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Arabic","Frensh"], // optional: Leave the array empty if you don't want to display languages
+  languages: ["English", "Arabic", "Frensh"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter = {
@@ -18,8 +18,8 @@ const newsletter = {
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
   description: (
     <>
-      I occasionally write about design, technology, and share thoughts on the intersection of
-      creativity and engineering.
+      I occasionally write about design, technology, and share thoughts on the
+      intersection of creativity and engineering.
     </>
   ),
 };
@@ -35,7 +35,7 @@ const social = [
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/in/elhassan-dahmouchi-a9539333a/",
+    link: "https://www.linkedin.com/in/elhassan-dahmouchi-a55b10391/",
   },
   {
     name: "X",
@@ -58,13 +58,19 @@ const home = {
   headline: <>Building bridges between design and code</>,
   featured: {
     display: true,
-    title: <>Recent project: <strong className="ml-4">Alert & Analysis System</strong></>,
+    title: (
+      <>
+        Recent project: <strong className="ml-4">SEDEC website</strong>
+      </>
+    ),
     href: "#",
   },
   subline: (
     <>
-      I'm Elhassan, a passionate developer focused on building smart web solutions.
-      <br /> Currently working on an alert reporting and analysis project to help report and study incidents.
+      I'm Elhassan, a passionate developer focused on building smart web
+      solutions.
+      <br /> Currently working on an alert reporting and analysis project to
+      help report and study incidents.
     </>
   ),
 };
@@ -83,20 +89,21 @@ const about = {
   },
   calendar: {
     display: true,
-    link: "https://cal.com",
+    link: "https://cal.com/hassan-dahmouchi-miszag/appointment",
   },
   intro: {
     display: true,
     title: "Introduction",
     description: (
       <>
-        Elhassan is a Morocco-based web developer passionate about creating smart solutions
-        for real-world problems. His work focuses on building alert reporting and analysis systems,
-        combining technology and innovation to improve incident management and response.
+        Elhassan is a Morocco-based web developer passionate about creating
+        smart solutions for real-world problems. His work focuses on building
+        alert reporting and analysis systems, combining technology and
+        innovation to improve incident management and response.
       </>
     ),
   },
-  
+
   work: {
     display: true, // set to false to hide this section
     title: "Work Experience",
@@ -107,10 +114,14 @@ const about = {
         role: "Full-Stack Developer (Internship and Freelance)",
         achievements: [
           <>
-            Worked on an <strong>Alert Reporting and Analysis System</strong> to help organizations monitor, report, and analyze incidents effectively.
+            Worked on an <strong>Alert Reporting and Analysis System</strong> to
+            help organizations monitor, report, and analyze incidents
+            effectively.
           </>,
           <>
-            Contributed to the development of a <strong>School Management System</strong> for handling students, classes, content, absences, grades, and payment management.
+            Contributed to the development of a{" "}
+            <strong>School Management System</strong> for handling students,
+            classes, content, absences, grades, and payment management.
           </>,
         ],
         images: [
@@ -128,10 +139,13 @@ const about = {
         role: "Freelance Web & Mobile Developer",
         achievements: [
           <>
-            Built <strong>GFY International</strong> — an e-commerce platform for car and automobile accessories.
+            Built <strong>GFY International</strong> — an e-commerce platform
+            for car and automobile accessories.
           </>,
           <>
-            Developed multiple responsive landing pages and websites using <strong>Next.js</strong>, <strong>TailwindCSS</strong>, and modern UI/UX practices.
+            Developed multiple responsive landing pages and websites using{" "}
+            <strong>Next.js</strong>, <strong>TailwindCSS</strong>, and modern
+            UI/UX practices.
           </>,
         ],
         images: [],
@@ -142,7 +156,8 @@ const about = {
         role: "Mobile Developer",
         achievements: [
           <>
-            Developed a <strong>React Native mobile game</strong> for primary school students to enhance learning and engagement.
+            Developed a <strong>React Native mobile game</strong> for primary
+            school students to enhance learning and engagement.
           </>,
         ],
         images: [],
@@ -153,13 +168,13 @@ const about = {
         role: "Mobile App Developer",
         achievements: [
           <>
-            Created <strong>CoursaMaroc</strong>, a mobile application for taxi management, focusing on booking, tracking, and trip management.
+            Created <strong>CoursaMaroc</strong>, a mobile application for taxi
+            management, focusing on booking, tracking, and trip management.
           </>,
         ],
         images: [],
       },
     ],
-    
   },
   studies: {
     display: true, // set to false to hide this section
@@ -167,11 +182,20 @@ const about = {
     institutions: [
       {
         name: "University Mohamed V, Rabat",
-        description: <>Master's degree in Software Development and Business Intelligence Engineering (Ingénierie de Développement Logiciel et Décisionnel).</>,
+        description: (
+          <>
+            Master's degree in Software Development and Business Intelligence
+            Engineering (Ingénierie de Développement Logiciel et Décisionnel).
+          </>
+        ),
       },
       {
         name: "Higher School of Technology, Salé",
-        description: <>Bachelor's degree in Mobile Application Engineering (with honors).</>,
+        description: (
+          <>
+            Bachelor's degree in Mobile Application Engineering (with honors).
+          </>
+        ),
       },
       {
         name: "Higher School of Technology, Beni Mellal",
@@ -183,14 +207,16 @@ const about = {
       },
     ],
   },
-  
+
   technical: {
     display: true, // set to false to hide this section
     title: "Technical skills",
     skills: [
       {
         title: "Figma",
-        description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
+        description: (
+          <>Able to prototype in Figma with Once UI with unnatural speed.</>
+        ),
         // optional: leave the array empty if you don't want to display images
         images: [
           {
@@ -209,7 +235,9 @@ const about = {
       },
       {
         title: "Next.js",
-        description: <>Building next gen apps with Next.js + Prisma + PostgreSql.</>,
+        description: (
+          <>Building next gen apps with Next.js + Prisma + PostgreSql.</>
+        ),
         // optional: leave the array empty if you don't want to display images
         images: [
           {
