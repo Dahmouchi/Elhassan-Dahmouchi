@@ -60,10 +60,10 @@ const home = {
     display: true,
     title: (
       <>
-        Recent project: <strong className="ml-4">SEDEC website</strong>
+        Recent project: <strong className="ml-4">BuildEstate website</strong>
       </>
     ),
-    href: "#",
+    href: "https://buildalittlebiz-build-immo.przujz.easypanel.host/",
   },
   subline: (
     <>
@@ -109,19 +109,24 @@ const about = {
     title: "Work Experience",
     experiences: [
       {
-        company: "BuildalittleBiz",
-        timeframe: "2024 - Present",
-        role: "Full-Stack Developer (Internship and Freelance)",
+        company: "BuildalittleBiz", //[cite: 2]
+        timeframe: "July 2024 - Present", //[cite: 2]
+        role: "Full-Stack Web Developer", //[cite: 2]
         achievements: [
           <>
-            Worked on an <strong>Alert Reporting and Analysis System</strong> to
-            help organizations monitor, report, and analyze incidents
-            effectively.
+            Contributed to a <strong>School Management System</strong> project
+            by creating dynamic interfaces, APIs, and database integrations.{" "}
+            {/*[cite: 2] */}
           </>,
           <>
-            Contributed to the development of a{" "}
-            <strong>School Management System</strong> for handling students,
-            classes, content, absences, grades, and payment management.
+            Developed reactive and scalable applications using{" "}
+            <strong>Next.js</strong>, <strong>Prisma</strong>, and other modern
+            web technologies. {/*[cite: 2] */}
+          </>,
+          <>
+            Designed an <strong>Affiliate Marketing Platform</strong> enabling
+            user registration, referral tracking, and payment management via
+            secure APIs and a high-performance admin dashboard. {/*[cite: 2] */}
           </>,
         ],
         images: [
@@ -134,42 +139,57 @@ const about = {
         ],
       },
       {
-        company: "Freelance Projects",
-        timeframe: "2022 - Present",
-        role: "Freelance Web & Mobile Developer",
+        company: "Freelance Projects", //[cite: 2]
+        timeframe: "2024 - Present",
+        role: "Full-Stack & Mobile Developer",
         achievements: [
           <>
-            Built <strong>GFY International</strong> — an e-commerce platform
-            for car and automobile accessories.
+            Developed <strong>KiraaGo</strong>, a complete car rental management
+            platform featuring booking, fleet management, and real-time admin
+            dashboards. {/*[cite: 2] */}
           </>,
           <>
-            Developed multiple responsive landing pages and websites using{" "}
-            <strong>Next.js</strong>, <strong>TailwindCSS</strong>, and modern
-            UI/UX practices.
+            Built <strong>BuildEstate</strong>, an innovative real estate web
+            and mobile platform integrating{" "}
+            <strong>3D virtual tours (digital twins)</strong> for immersive
+            property exploration. {/*[cite: 2] */}
           </>,
-        ],
-        images: [],
-      },
-      {
-        company: "Bachelor Internship Project",
-        timeframe: "2022",
-        role: "Mobile Developer",
-        achievements: [
           <>
-            Developed a <strong>React Native mobile game</strong> for primary
-            school students to enhance learning and engagement.
+            Created <strong>Enita & Scoolia</strong>, comprehensive e-learning
+            platforms with course management, interactive interfaces, and online
+            evaluation systems. {/*[cite: 2] */}
           </>,
         ],
         images: [],
       },
       {
-        company: "Final Year Project - CoursaMaroc",
-        timeframe: "2021",
-        role: "Mobile App Developer",
+        company:
+          "Program for the Generalization of Information and Communication Technologies in Public Education", //[cite: 2]
+        timeframe: "March 2023 - July 2023", //[cite: 2]
+        role: "Mobile Developer (Internship)",
         achievements: [
           <>
-            Created <strong>CoursaMaroc</strong>, a mobile application for taxi
-            management, focusing on booking, tracking, and trip management.
+            Digitalized an educational program into a{" "}
+            <strong>Mobile Application</strong> to improve accessibility and
+            usage for students and teachers. {/*[cite: 2] */}
+          </>,
+          <>
+            Designed and developed the application using modern frameworks to
+            ensure intuitive navigation and smooth functionality.{" "}
+            {/*[cite: 2] */}
+          </>,
+        ],
+        images: [],
+      },
+      {
+        company: "ERRAHMA HYDRO", //[cite: 2]
+        timeframe: "March 2022 - July 2022", //[cite: 2]
+        role: "Software Developer (Internship)",
+        achievements: [
+          <>
+            Developed a <strong>Desktop Application</strong> for employee
+            management using appropriate technologies to streamline internal
+            operations. {/*[cite: 2] */}
           </>,
         ],
         images: [],
@@ -181,64 +201,46 @@ const about = {
     title: "Studies",
     institutions: [
       {
-        name: "University Mohamed V, Rabat",
+        name: "University Mohammed V, Rabat", //[cite: 2]
         description: (
           <>
-            Master's degree in Software Development and Business Intelligence
-            Engineering (Ingénierie de Développement Logiciel et Décisionnel).
+            Master's degree in Software Development and Decision Engineering
+            (Ingénierie de Développement Logiciel et Décisionnel).{" "}
+            {/*[cite: 2] */}
           </>
         ),
       },
       {
-        name: "Higher School of Technology, Salé",
+        name: "Higher School of Technology (EST), Salé", //[cite: 2]
         description: (
           <>
-            Bachelor's degree in Mobile Application Engineering (with honors).
+            Professional License (Bachelor's degree) in Mobile Application
+            Engineering. {/*[cite: 2] */}
           </>
         ),
       },
       {
-        name: "Higher School of Technology, Beni Mellal",
-        description: <>DUT in Computer Engineering (with honors).</>,
-      },
-      {
-        name: "High School Diploma",
-        description: <>Baccalaureate in Physical Sciences and Chemistry.</>,
+        name: "Higher School of Technology (EST), Béni Mellal", //[cite: 2]
+        description: (
+          <>University Diploma of Technology (DUT) in Computer Engineering.</>
+        ), //[cite: 2]
       },
     ],
   },
-
   technical: {
     display: true, // set to false to hide this section
     title: "Technical skills",
     skills: [
       {
-        title: "Figma",
+        title: "Frontend & Full-Stack",
+        //[cite: 2]
         description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
+          <>
+            Building next-gen applications with <strong>Next.js</strong>,{" "}
+            <strong>TypeScript</strong>, <strong>ReactJS</strong>, and{" "}
+            <strong>Tailwind CSS</strong>.
+          </>
         ),
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/og/figma1.png",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/og/figma2.png",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
-      },
-      {
-        title: "Next.js",
-        description: (
-          <>Building next gen apps with Next.js + Prisma + PostgreSql.</>
-        ),
-        // optional: leave the array empty if you don't want to display images
         images: [
           {
             src: "/images/projects/project-02/cover-01.png",
@@ -247,6 +249,41 @@ const about = {
             height: 9,
           },
         ],
+      },
+      {
+        title: "Mobile Development",
+        //[cite: 2]
+        description: (
+          <>
+            Creating cross-platform mobile experiences utilizing{" "}
+            <strong>React Native</strong>.
+          </>
+        ),
+        images: [],
+      },
+      {
+        title: "Backend & Databases",
+        //[cite: 2]
+        description: (
+          <>
+            Developing robust server-side architectures with{" "}
+            <strong>Node.js</strong>, <strong>Spring Boot</strong>, and
+            databases including <strong>PostgreSQL</strong>,{" "}
+            <strong>MongoDB</strong>, and <strong>Prisma ORM</strong>.
+          </>
+        ),
+        images: [],
+      },
+      {
+        title: "AI & Automation",
+        //[cite: 2]
+        description: (
+          <>
+            Implementing <strong>Machine Learning</strong> models and building
+            automated workflows using <strong>N8N</strong>.
+          </>
+        ),
+        images: [],
       },
     ],
   },

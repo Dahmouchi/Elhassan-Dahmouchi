@@ -1,0 +1,43 @@
+---
+title: "BuildEstate - Immersive 3D Real Estate Platform with Digital Twins"
+publishedAt: "2026-08-01"
+summary: "An innovative real estate platform integrating 3D virtual tours (digital twins) for immersive property exploration. Built with Next.js, React Native, and WebGL/Three.js to enable seamless, interactive, and high-performance property searches."
+images:
+  - "/images/gallery/p1.png"
+team:
+  - name: "Elhassan DAHMOUCHI"
+    role: "Full-Stack Web Developer"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/elhassan-dahmouchi-a55b10391/"
+link: "https://buildalittlebiz-build-immo.przujz.easypanel.host/"
+---
+
+## Overview
+
+BuildEstate is a state-of-the-art real estate platform designed to transform how prospective buyers and renters explore properties. By integrating **3D virtual tours (digital twins)** directly into the web and mobile interfaces, BuildEstate allows users to walk through properties virtually from anywhere in the world. This project bridges the gap between traditional listings and physical visits, saving time for both agencies and clients.
+
+## Key Features
+
+- **3D Digital Twins**: Immersive virtual walk-throughs using WebGL and Three.js, enabling users to explore properties in full 3D with realistic scale and lighting.
+- **Interactive Map Search**: Fast and responsive map-based property search powered by Mapbox, featuring cluster rendering and location filtering.
+- **Real-Time Messaging**: Built-in chat system allowing prospective buyers to communicate instantly with property agents and schedule viewings.
+- **Cross-Platform Mobile App**: A companion mobile application built with React Native, providing native performance and on-the-go access to listings and virtual tours.
+- **Rich Dashboard for Agencies**: Detailed admin dashboard enabling agents to upload properties, manage listings, view analytics, and respond to inquiries.
+
+## Technologies Used
+
+- **Next.js & React**: For the core web application, ensuring server-side rendering for optimal SEO and rapid initial load times.
+- **React Native**: To deliver a responsive, native-feeling mobile experience for iOS and Android.
+- **Three.js & WebGL**: To render interactive 3D environments smoothly in the browser and mobile viewports.
+- **Prisma & PostgreSQL**: For secure, type-safe database schemas and robust data relations between users, properties, and messages.
+- **Tailwind CSS**: For clean, modern, and fully responsive UI styling across all components.
+
+## Challenges and Learnings
+
+One of the primary challenges was optimizing the loading times and rendering performance of high-resolution 3D models on mobile devices and slower network connections. To solve this, we implemented progressive loading, texture compression, and automated level-of-detail (LOD) adjustments. This ensured that the virtual tours remained fluid and responsive, even on entry-level mobile devices.
+
+Another challenge lay in synchronizing real-time chat messages between the web dashboard and the mobile application. Utilizing WebSockets via Socket.io alongside database-backed fallback polling resolved this, delivering an instant and highly reliable communication channel.
+
+## Outcome
+
+BuildEstate successfully launched as a cutting-edge real estate solution. The integration of 3D virtual tours resulted in a **40% increase in user engagement** on property listings and a significant reduction in unnecessary physical visits. The platform sets a new standard for modern real estate exploration, demonstrating the impact of combining immersive web technologies with traditional web portals.

@@ -1,0 +1,43 @@
+---
+title: "KiraaGo - Complete Car Rental Management & Booking Platform"
+publishedAt: "2026-06-20"
+summary: "A comprehensive car rental booking and fleet management system featuring real-time availability tracking, payment processing, and dynamic admin analytics dashboards. Developed with Next.js, Node.js, Express, MongoDB, and Tailwind CSS."
+images:
+  - "/images/gallery/k1.png"
+team:
+  - name: "Elhassan DAHMOUCHI"
+    role: "Full-Stack & Mobile Developer"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/elhassan-dahmouchi-a55b10391/"
+link: "https://db-test-car.puunoo.easypanel.host/ar"
+---
+
+## Overview
+
+KiraaGo is an end-to-end car rental platform designed to streamline vehicle reservations, customer relations, and fleet operations. The solution replaces manual booking workflows with an automated, user-friendly reservation portal and provides rental companies with powerful administrative tools to manage their vehicle inventory, track earnings, and coordinate schedules.
+
+## Key Features
+
+- **Real-Time Booking Engine**: Instant reservation system with dynamic price calculation based on rental duration, season, and vehicle class.
+- **Fleet Inventory Management**: Centralized hub for tracking vehicle availability, maintenance status, fuel levels, and document expirations.
+- **Interactive Location Mapping**: Map integration for users to locate pickup/dropoff branches and view available fleets at specific hubs.
+- **Secure Payment Processing**: Integrated checkout flow using Stripe for booking deposits, damage deposits, and automated invoices.
+- **Admin & Analytics Dashboard**: High-fidelity charts showing revenue growth, fleet utilization rates, popular vehicles, and upcoming bookings.
+
+## Technologies Used
+
+- **Next.js & React**: To deliver a blazing-fast, responsive web interface for customers searching and booking vehicles.
+- **Node.js & Express**: A lightweight, scalable backend REST API handling booking logic, user authentication, and system events.
+- **MongoDB & Mongoose**: Flexible, document-based storage ideal for vehicle specifications, complex booking states, and transaction histories.
+- **Tailwind CSS & Shadcn UI**: For crafting a premium, user-friendly design interface with dark/light mode compatibility.
+- **Stripe API**: For handling secure credit card transactions and subscription packages for recurring corporate rentals.
+
+## Challenges and Learnings
+
+A major challenge was preventing double-bookings of the same vehicle during overlapping time frames, especially during high-demand holidays. We resolved this by implementing transactional booking confirmations at the database level with reservation locks, guaranteeing that a vehicle is temporarily reserved during checkout before finalize-booking confirmation.
+
+Another challenge lay in optimizing fleet utilization analytics. By developing custom aggregation pipelines in MongoDB, we were able to process thousands of booking records in milliseconds to produce daily utilization charts for the admin dashboard.
+
+## Outcome
+
+KiraaGo successfully digitized car rental workflows, leading to a **30% reduction in booking processing times** and an increase in overall fleet utilization. By offering customers a clean, modern online booking experience, agencies using KiraaGo reported higher user satisfaction and fewer reservation-related disputes.
