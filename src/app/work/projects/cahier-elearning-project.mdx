@@ -1,0 +1,48 @@
+---
+title: "Cahier - Multi-Role E-Learning Marketplace for Selling and Taking Courses"
+publishedAt: "2026-10-07"
+summary: "A Udemy-style marketplace where instructors build and sell video, text and quiz courses, students buy and track their progress to earn verifiable certificates, and admins moderate. Built with Next.js 16, Prisma, PostgreSQL, Better Auth, Stripe and Mux."
+images:
+  - "/images/projects/cahier/home.webp"
+  - "/images/projects/cahier/catalog.webp"
+  - "/images/projects/cahier/course.webp"
+  - "/images/projects/cahier/learn.webp"
+team:
+  - name: "Elhassan DAHMOUCHI"
+    role: "Full-Stack Web Developer"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/elhassan-dahmouchi-a55b10391/"
+---
+
+## Overview
+
+Cahier is a general e-learning marketplace, not a single-school product. Independent instructors create, price and publish their own courses, students buy them and learn at their own pace, and a small admin team approves courses and manages the platform. The product is built around one goal: a student should finish what they bought, and an instructor should be able to build and sell a course without help.
+
+The interface is available in English and French, and is designed to hold up to the longer French labels without clipping or wrapping.
+
+## Key Features
+
+- **Role-Based Platform**: Four roles (guest, student, instructor, admin) enforced in three layers: route gating, server-side guards in every action, and UI.
+- **Public Catalog**: Search, filters, category pages, instructor profiles and course landing pages with a curriculum preview and free preview lessons.
+- **Instructor Studio**: Course editor with a drag-and-drop curriculum, a lesson editor for video, rich text and quizzes, pricing, a publish checklist, and sales and student analytics.
+- **Learning Experience**: A full-bleed learn view with a video player, curriculum sidebar, quizzes, progress tracking, and a resume point that always leads to the next lesson.
+- **Payments**: Stripe Checkout with enrollment created only from the verified webhook, plus a manual-approval flow with payment proof and coupon support.
+- **Verifiable Certificates**: Certificates are issued when every published lesson is done and every quiz is passed, with a public verification page and a downloadable PDF.
+- **Admin Moderation**: A review queue for approving courses, plus user, category, coupon and payment-request management.
+
+## Technologies Used
+
+- **Next.js 16 (App Router) & TypeScript**: Server Components and Server Actions keep API boilerplate low, with strict typing throughout.
+- **PostgreSQL & Prisma 7**: A relational data model for courses, orders, enrollments, progress and certificates. Money is stored in integer cents.
+- **Better Auth**: Email and password and social sign-in, database sessions and role-based access.
+- **Tailwind CSS v4 & shadcn/ui**: An accessible component system targeting WCAG 2.2 AA, with visible focus, keyboard paths and reduced-motion support.
+- **Stripe & Mux**: Secure payments and adaptive, signed video streaming that protects paid content.
+- **Zod & React Hook Form**: One validation schema per form, shared between client and server.
+- **Resend & React Email**: Verification emails, receipts and certificate notifications.
+- **Vitest & Playwright**: Unit tests and end-to-end tests covering purchase-to-certificate, role gating and SEO.
+
+## Challenges and Learnings
+
+Enrollment correctness was the central concern. Access is granted only from the Stripe webhook, never from the browser redirect, and manual payment requests are serialized with a Postgres advisory lock so a student cannot create duplicate pending orders for the same course.
+
+Certificates needed to stay trustworthy as courses change. Rather than trusting a stored progress percentage, completion is recomputed from the underlying lesson and quiz-attempt rows on every check, so a lesson published after a student's last action is handled correctly. Certificates are issued inside the same transaction as the completion check, and the email goes out only after it commits.
