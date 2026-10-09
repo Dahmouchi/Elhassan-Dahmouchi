@@ -60,17 +60,16 @@ const home = {
     display: true,
     title: (
       <>
-        Recent project: <strong className="ml-4">BuildEstate website</strong>
+        Recent project: <strong className="ml-4">CompliVox – CDG Capital</strong>
       </>
     ),
-    href: "https://buildalittlebiz-build-immo.przujz.easypanel.host/",
+    href: "/work/complivox-cdg-project",
   },
   subline: (
     <>
       I'm Elhassan, a passionate developer focused on building smart web
       solutions.
-      <br /> Currently working on an alert reporting and analysis project to
-      help report and study incidents.
+      <br /> Specialized in enterprise compliance systems, modern web architectures, and interactive platforms.
     </>
   ),
 };
@@ -96,10 +95,9 @@ const about = {
     title: "Introduction",
     description: (
       <>
-        Elhassan is a Morocco-based web developer passionate about creating
-        smart solutions for real-world problems. His work focuses on building
-        alert reporting and analysis systems, combining technology and
-        innovation to improve incident management and response.
+        Elhassan is a Morocco-based full-stack software engineer passionate about creating
+        robust and secure digital solutions for real-world enterprise problems. His work focuses on
+        building incident and alert reporting platforms, multi-tenant architectures, and modern web applications.
       </>
     ),
   },
@@ -113,6 +111,11 @@ const about = {
         timeframe: "July 2024 - Present", //[cite: 2]
         role: "Full-Stack Web Developer", //[cite: 2]
         achievements: [
+          <>
+            Architected and built <strong>CompliVox (CDG Capital)</strong>, an enterprise-grade
+            whistleblowing and compliance platform with anonymous alert reporting, 2FA/TOTP security,
+            AI triage, and multi-tenant RBAC workflows.
+          </>,
           <>
             Contributed to a <strong>School Management System</strong> project
             by creating dynamic interfaces, APIs, and database integrations.{" "}
@@ -131,8 +134,8 @@ const about = {
         ],
         images: [
           {
-            src: "/images/og/build.webp",
-            alt: "Once UI Project",
+            src: "/images/projects/cdg/1.png",
+            alt: "CompliVox CDG Capital",
             width: 16,
             height: 9,
           },

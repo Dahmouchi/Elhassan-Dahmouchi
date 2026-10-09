@@ -1,0 +1,68 @@
+---
+title: "CompliVox - CDG Capital Whistleblowing & Compliance Management Platform"
+publishedAt: "2026-10-09"
+summary: "An institutional whistleblowing, ethics, and compliance management platform engineered for CDG Capital. Features end-to-end anonymity, encrypted multi-channel case tracking, 5-level RBAC workflows, AI triage assistant, 2FA/TOTP security, and complete trilingual support (FR / EN / AR RTL). Built with Next.js 15, React 19, Tailwind CSS 4, Prisma 7, PostgreSQL, and NextAuth."
+images:
+  - "/images/projects/cdg/1.png"
+  - "/images/projects/cdg/2.png"
+  - "/images/projects/cdg/3.png"
+  - "/images/projects/cdg/4.png"
+team:
+  - name: "Elhassan DAHMOUCHI"
+    role: "Full-Stack Web Developer"
+    avatar: "/images/Untitled-1.png"
+    linkedIn: "https://www.linkedin.com/in/elhassan-dahmouchi-a55b10391/"
+---
+
+## Overview
+
+**CompliVox** is an enterprise-grade ethics, incident reporting, and compliance management platform built for **CDG Capital**. Engineered according to strict **Security-by-Design** and **Privacy-by-Default** principles, the platform guarantees total confidentiality and legal protection for whistleblowers while equipping compliance officers and ethics committees with robust tools to investigate, track, and resolve sensitive alerts.
+
+The application adheres to Moroccan legal standards (**Law No. 09-08 / CNDP**) for personal data protection, enforcing strict data minimization, encrypted communication channels, and immutable audit logs.
+
+## Security & System Architecture
+
+Security is the cornerstone of CompliVox. The system implements defense-in-depth across every layer:
+
+- **Dual Authentication Mechanism**: Seamless user access via internal credentials (salted Bcrypt hashing with 10 rounds and constant-time comparisons) and Google OAuth 2.0 (SSO via OpenID Connect).
+- **Two-Factor Authentication (2FA / TOTP)**: Full compliance with RFC 6238, enabling time-based one-time passwords compatible with Google Authenticator and Microsoft Authenticator.
+- **Strict 5-Level RBAC Governance**: Multi-tenant authorization isolating permissions across **Admin**, **Responsable** (Ethics Committee), **Analyste** (Investigators), **User** (Employees/Whistleblowers), and Suspended accounts with server-side layout guards.
+- **Encrypted Alert Communication (`AlertChat`)**: Completely anonymized messaging between whistleblowers and assigned investigators with automatic stripping of IP addresses, user agents, and personal identifiers.
+- **Immutable Audit Logging (`AlertHistory`)**: Complete non-repudiation logging for every status update, investigator assignment, and cross-validation step.
+- **Multi-Establishment Isolation**: Multi-entity tenancy support ensuring strict perimeter segregation across CDG Capital branches and subsidiaries.
+
+## Key Features
+
+- **End-to-End Anonymous Reporting**: Step-by-step reporting wizard with secure encrypted tracking codes, allowing whistleblowers to monitor case status and communicate without revealing identity.
+- **AI-Powered Triage Assistant**: Automated incident classification, severity scoring, and initial risk assessment to assist investigators in triaging urgent cases rapidly.
+- **Multi-Stage Investigation Workflow**: Cross-tier approval pipeline requiring combined analyst, responsable, and committee validations before sensitive dossiers can be closed.
+- **Consolidated Dashboard Shell**: High-density, role-driven administrative interface featuring faceted DataTables, customizable column views, and CSV export capabilities.
+- **Comprehensive Trilingual Support**: Native support for French, English, and Arabic with seamless Right-to-Left (RTL) layout switching and culturally adapted typography.
+- **Branded PDF Dossier Generation**: Automated export engine generating tamper-proof PDF audit reports and investigation summaries styled in the CDG Capital visual identity.
+
+## CDG Capital Design System
+
+The interface embodies CDG Capital's institutional visual identity:
+- **Brand Palette**: CDG Green (`#469042`), Deep Forest Green (`#2F622D`), Slate Ink (`#354048`), and clean neutral backdrops.
+- **Accessibility**: High-contrast ratios meeting WCAG 2.2 AA standards, distinct keyboard focus rings (`:focus-visible`), and touch targets optimized for mobile viewports (≥ 44px).
+- **Micro-Interactions**: Smooth 150–200ms cubic transitions, skeleton loading states, and comprehensive `prefers-reduced-motion` fallbacks.
+
+## Technologies Used
+
+- **Next.js 15 (App Router) & React 19**: Modern Server Components, Server Actions, and dynamic layout caching for optimal responsiveness.
+- **TypeScript**: End-to-end type safety spanning API contracts, database entities, and UI component props.
+- **Tailwind CSS 4 & Shadcn UI**: Custom design tokens, high-density dashboard layouts, and accessible UI primitives.
+- **PostgreSQL & Prisma 7**: Parameterized relational schemas preventing SQL injection, with encrypted transit (SSL/TLS).
+- **NextAuth.js**: Session management using secure, HTTP-only, SameSite cookies and JWT encryption.
+- **Zod**: Dual client and server-side schema validation for all report submissions and user inputs.
+- **jsPDF & Recharts**: Vector data visualization and automated executive PDF report compilation.
+
+## Challenges and Learnings
+
+One of the central technical challenges was ensuring **absolute whistleblower anonymity** while maintaining an interactive, two-way investigation dialogue. We resolved this by isolating the messaging subsystem into an encrypted, metadata-free thread model accessible only via unique cryptographic tracking tokens.
+
+Another critical architectural challenge was designing a **tamper-proof cross-validation workflow**. To prevent unilateral closure of sensitive compliance files, the workflow engine enforces sequential approvals from both assigned analysts and ethics committee directors, registering every action with timestamped signatures in an append-only audit trail.
+
+## Outcome
+
+CompliVox provides CDG Capital with a secure, institutional whistleblowing and compliance framework. The platform establishes trust through uncompromising privacy protections, accelerates case resolution through automated AI triage, and guarantees full regulatory compliance under national data protection frameworks.
